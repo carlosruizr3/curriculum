@@ -1,0 +1,46 @@
+<section class="bg_black4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="about_img animation" data-animation="fadeInUp" data-animation-delay="0.02s">
+                    <img src="../../../assets/images/aboutIm.jpg" alt="about_img" />
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="about_info text_white animation" data-animation="fadeInUp" data-animation-delay="0.02s">
+                    <div class="heading_s1 heading_light mb-3">
+                        <h2>Acerca de mí</h2>
+                    </div>
+                    <p>Desarrollador de software con años de experiencia en el desarrollo y gestión de software
+                        escritos en distintos lenguajes de programación.</p>
+                    <p>Con participación en distintos proyectos de desarrollo de distintas magnitudes, contando con
+                        el conocimiento y habilidades necesarios para desenvolverme en cualquier tipo de proyecto.
+                    </p>
+                    <hr>
+                    <div class="headin  g_s1 heading_light mb-4">
+                        <h5>Información básica</h5>
+                    </div>
+                    <ul class="profile_info list_none">
+                        <li>
+                            <span class="title">Nacimiento:</span>
+                            <p *ngFor="let about of abouts">{{about.birth}}</p>
+                        </li>
+                        <li>
+                            <span class="title">Teléfono:</span>
+                            <p *ngFor="let about of abouts">{{about.phone}}</p>
+                        </li>
+                        <li>
+                            <span class="title">Correo:</span>
+                            <p *ngFor="let about of abouts">{{about.email}}</p>
+                        </li>
+                        <li>
+                            <span class="title">Dirección:</span>
+                            <p *ngFor="let about of abouts">{{about.address}}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

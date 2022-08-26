@@ -1,0 +1,57 @@
+<body>
+  <button type="button" routerLink="/admin/list_about" class="btn btn-secondary btn-block">
+    <span class=""></span> Regresar al menu
+  </button>
+  <div class="page-wrapper bg-dark p-t-100 p-b-50">
+    <div class="wrapper wrapper--w900">
+      <div class="card card-6">
+        <div class="card-heading">
+          <h2 class="title">Editar About</h2>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="formUpdate" (ngSubmit)="update(formUpdate.value )">
+            <div class="form-row">
+              <div class="name" for="inputBirth">Fecha de nacimiento</div>
+              <div class="value">
+                <input class="input--style-6" type="text" id="inputBirth" formControlName="birth">
+                <br>
+                <div class="alert alert-danger text-center  p-2" *ngIf="datos['birth' ].errors?.required">Nacimiento
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="name" for="inputFecha">Telefono</div>
+              <div class="value">
+                <input class="input--style-6" type="text" id="inputPhone" formControlName="phone">
+                <div class="alert alert-danger text-center  p-2" *ngIf="datos['phone' ].errors?.required">Telefono</div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="name" for="inputBusiness">Correo</div>
+              <div class="value">
+                <input class="input--style-6" type="text" id="inputEmail" formControlName="email">
+                <div class="alert alert-danger text-center  p-2" *ngIf="datos['email' ].errors?.required">Correo</div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="name" for="inputDescripcion">Dirección</div>
+              <div class="value">
+                <div class="input-group">
+                  <textarea class="textarea--style-6" id="inputAddress" formControlName="address"
+                    placeholder="Describe brevemente tus actividades dentro de la empresa"></textarea>
+                </div>
+                <div class="alert alert-danger text-center  p-2" *ngIf="datos['address' ].errors?.required">Dirección
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn--radius-2 btn--blue-2" [disabled]="formUpdate.invalid">Guardar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="js/global.js"></script>
+</body>

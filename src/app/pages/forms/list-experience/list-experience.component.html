@@ -1,0 +1,51 @@
+<body>
+  <button type="button" routerLink="/admin" class="btn btn-secondary btn-block">
+    <span class=""></span> Regresar
+  </button>
+  <div class="page-wrapper bg-dark p-t-70 p-b-10">
+    <div class="container">
+      <div class="card-heading">
+        <h2 class="title">Listado de Experiencias</h2>
+      </div>
+      <div>
+
+        <button class="btn btn-success" routerLink="/create_experience">Crear Experiencia</button>
+      </div>
+      <div class="table-responsive custom-table-responsive">
+        <table class="table custom-table">
+          <thead>
+            <tr>
+              <th scope="col"> ID </th>
+              <th scope="col"> Área </th>
+              <th scope="col"> Fecha </th>
+              <th scope="col"> Empresa </th>
+              <th scope="col"> Descripcion </th>
+              <th scope="col"> Type </th>
+              <th scope="col">Action </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let experience of experiences">
+              <td>{{experience.id}} <br></td>
+              <td>{{experience.area}} <br></td>
+              <td>{{experience.date}} <br></td>
+              <td>{{experience.business}} <br></td>
+              <td>{{experience.description }} <br></td>
+              <td>{{experience.type}} <br></td>
+              <td>
+                <button class="btn btn-dark col-md-8" (click)="update (experience.id )">Editar </button>
+                <button class="btn btn-warning  col-md-8" (click)="eliminar(experience.id) ">Eliminar </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>

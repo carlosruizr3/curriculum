@@ -1,0 +1,66 @@
+<body>
+  <button type="button" routerLink="/admin/list_education" class="btn btn-secondary btn-block">
+    <span class=""></span> Regresar al menu
+  </button>
+  <div class="page-wrapper bg-dark p-t-100 p-b-50">
+    <div class="wrapper wrapper--w900">
+      <div class="card card-6">
+        <div class="card-heading">
+          <h2 class="title">Editar educación</h2>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="formUpdate" (ngSubmit)="update(formUpdate.value )">
+            <div class="form-row">
+              <div class="name" for="inputEmpresa">Nivel Academico</div>
+              <div class="value">
+                <input class="input--style-6" type="text" id="inputLevel" formControlName="level">
+                <br>
+                <div class="alert alert-danger text-center  p-2" *ngIf="datos['level' ].errors?.required">Nivel
+                  Academico</div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="name" for="inputFecha">Fecha</div>
+              <div class="value">
+                <input class="input--style-6" type="text" id="inputDate" formControlName="date">
+                <div class="alert alert-danger text-center  p-2" *ngIf="datos['date' ].errors?.required">Date</div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="name" for="inputInstitution">Institución</div>
+              <div class="value">
+                <input class="input--style-6" type="text" id="inputInstitution" formControlName="institution">
+                <div class="alert alert-danger text-center  p-2" *ngIf="datos['institution' ].errors?.required">
+                  Institución</div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="name" for="inputFecha">Tipo de dato</div>
+              <div class="value">
+                <input class="input--style-6" type="text" id="inputType" formControlName="type">
+                <div class="alert alert-danger text-center  p-2" *ngIf="datos['type' ].errors?.required">Tipo</div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="name" for="inputDescripcion">Descripción</div>
+              <div class="value">
+                <div class="input-group">
+                  <textarea class="textarea--style-6" id="inputDescripcion" formControlName="description"
+                    placeholder="Describe brevemente tus actividades dentro de la empresa"></textarea>
+                </div>
+                <div class="alert alert-danger text-center  p-2" *ngIf="datos['description' ].errors?.required">
+                  Descripción</div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn--radius-2 btn--blue-2" [disabled]="formUpdate.invalid">Guardar</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="js/global.js"></script>
+</body>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar-nav" data-offset="110">
+    <header class="header_wrap fixed-top light_skin hover_menu_style3 transparent-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation"> <span class="ion-android-menu"></span> </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <a class="navbar-brand page-scroll" href="#home_section">
+                        <img class="logo_light" src="../../../assets/images/logo_white.png" alt="logo" />
+                        <img class="logo_dark" src="../../../assets/images/logo_dark.png" alt="logo" />
+                        <img class="logo_default" src="../../../assets/images/logo_dark.png" alt="logo" />
+                    </a>
+                    <ul class="navbar-nav">
+                        <li>
+                            <a class="nav-link active page-scroll" href="#home_section">Inicio</a>
+                        </li>
+                        <li>
+                            <a class="nav-link page-scroll" href="../about/about.component.html">Acérca</a>
+                        </li>
+                        <li>
+                            <a class="nav-link page-scroll" href="#education">Educación</a>
+                        </li>
+                        <li>
+                            <a class="nav-link page-scroll" href="#experience">Experiencia</a>
+                        </li>
+                        <li>
+                            <a class="nav-link page-scroll" href="#contact">contacto</a>
+                        </li>
+                        <li>
+                            <a class="nav-link page-scroll" routerLink="/login">Log in</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section id="home_section" class="banner_section banner_shape bg_black3">
+        <div class="banner_slide_content pb-0">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-xl-6 col-md-7">
+                        <div class="banner_content text_white banner_center_content">
+                            <h2 class="animation" data-animation="fadeInUp" data-animation-delay="0.02s">Hola, me
+                                llamo<br><br> Carlos Ruiz</h2>
+                            <div id="typed-strings" class="d-none">
+                                <b>Desarrollador de software multiplataforma</b> <b>Técnico superior universitario</b>
+                            </div>
+                            <h4 class="animation" data-animation="fadeInUp" data-animation-delay="0.03s">Hola, mi nombre
+                                completo es Carlos Enrique Ruiz Vázquez y soy ingeniero en desarrollo y gestión de
+                                software multiplataforma, aqui podras encontrar información personal como por ejemplo
+                                mis antiguos trabajos y estudios.<span id="typed-text" class="text_default"></span></h4>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-5">
+                        <div class="banner_img animation" data-animation="fadeInUp" data-animation-delay="0.02s">
+                            <img src="../../../assets/images/my_image.png" alt="my_image" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="social_banner social_vertical">
+            <ul class="list_none social_icons text-center">
+                <li><a href="#" class="sc_facebook"><i class="ion-social-facebook"></i></a></li>
+                <li><a href="#" class="sc_twitter"><i class="ion-social-twitter"></i></a></li>
+                <li><a href="#" class="sc_google"><i class="ion-social-googleplus"></i></a></li>
+                <li><a href="#" class="sc_youtube"><i class="ion-social-youtube-outline"></i></a></li>
+                <li><a href="#" class="sc_instagram"><i class="ion-social-instagram-outline"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <a href="#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i></a>
+</body>
+
+</html>

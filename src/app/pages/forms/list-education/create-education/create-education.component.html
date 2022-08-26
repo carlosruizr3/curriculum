@@ -1,0 +1,56 @@
+<body>
+  <button type="button" routerLink="/admin/list_education" class="btn btn-secondary btn-block">
+    <span class=""></span> Regresar al menu
+  </button>
+  <div class="page-wrapper bg-dark p-t-100 p-b-50">
+    <div class="wrapper wrapper--w900">
+      <div class="card card-6">
+        <div class="card-heading">
+          <h2 class="title">Crear Educación</h2>
+        </div>
+        <div class="card-body">
+          <form method="POST" [formGroup]="formW">
+            <div class="form-row">
+              <div class="name" for="inputLevel">Nivel Academico</div>
+              <div class="value">
+                <input class="input--style-6" type="text" id="inputLevel" formControlName="level">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="name" for="inputFecha">Fecha</div>
+              <div class="value">
+                <input class="input--style-6" type="text" id="inputDate" formControlName="date">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="name" for="inputInstitution">Nombre de la institución</div>
+              <div class="value">
+                <input class="input--style-6" type="text" id="inputInstitution" formControlName="institution">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="name" for="inputDescripcion">Descripción</div>
+              <div class="value">
+                <div class="input-group">
+                  <textarea class="textarea--style-6" id="inputDescripcion" formControlName="description"
+                    placeholder="Describe brevemente tus actividades dentro de la empresa"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="name" for="inputType">Tipo de educación</div>
+              <div class="value">
+                <input class="input--style-6" type="text" id="inputType" formControlName="type">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn--radius-2 btn--blue-2" (click)="registroEducations()">Crear Educación</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="js/global.js"></script>
+</body>

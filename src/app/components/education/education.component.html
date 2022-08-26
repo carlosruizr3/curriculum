@@ -1,0 +1,51 @@
+<section id="services" class="bg_black2">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-7 col-md-9 text-center">
+                <div class="heading_s1 heading_light animation text-center" data-animation="fadeInUp"
+                    data-animation-delay="0.02s">
+                    <h2>Educación</h2>
+                </div>
+                <p class="animation text-white" data-animation="fadeInUp" data-animation-delay="0.03s">Aprender y
+                    nutrirme con toda la información posible siempre a sido uno de mis principales objetivos, he
+                    concentrado mis estudios y conocimientos adquiridos a lo largo de mi carrera de Desarrollador.</p>
+            </div>
+        </div>
+        <div class="row animation" data-animation="fadeInUp" data-animation-delay="0.04s">
+            <div class="col-lg-4 col-xl-6" *ngFor="let item of educacion">
+                <div class="icon_box icon_box_style_2 box_dark">
+                    <div class="icon_box_content text_white">
+                        <h4>{{item.level}}</h4>
+                        <p><span class="text_default">{{item.date}}</span> {{item.institution}}</p>
+                        <hr>
+                        <p>{{item.description}}</p>
+                    </div>
+                </div>
+            </div>
+            <p>.</p>
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-lg-7 col-md-9 text-center">
+                    <div class="heading_s1 heading_light animation text-center" data-animation="fadeInUp"
+                        data-animation-delay="0.02s">
+                        <h2>Cursos</h2>
+                    </div>
+                    <p class="animation text-white" data-animation="fadeInUp" data-animation-delay="0.03s">Para aumentar
+                        y expandir mis conocimientos me he preparado con una gran variedad de cursos en distintas ramas
+                        de las tecnologías los cuales me han proporcionado un mayor porcentaje de conocimiento..</p>
+                </div>
+            </div>
+            <div class="row animation" data-animation="fadeInUp" data-animation-delay="0.04s">
+                <div class="col-lg-4 col-sm-6" *ngFor="let item of cursos">
+                    <div class="icon_box icon_box_style_2 box_dark">
+                        <div class="icon_box_content text_white">
+                            <h4>{{item.level}}</h4>
+                            <p><span class="text_default">{{item.date}}</span> {{item.institution}}</p>
+                            <hr>
+                            <p>{{item.description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,51 @@
+<body>
+  <button type="button" routerLink="/admin/list_about" class="btn btn-secondary btn-block">
+    <span class=""></span> Regresar al menu
+  </button>
+  <div class="page-wrapper bg-dark p-t-100 p-b-50">
+    <div class="wrapper wrapper--w900">
+      <div class="card card-6">
+        <div class="card-heading">
+          <h2 class="title">Crear About</h2>
+        </div>
+        <div class="card-body">
+          <form method="POST" [formGroup]="formW">
+            <div class="form-row">
+              <div class="name" for="inputBirth">Fecha de nacimiento</div>
+              <div class="value">
+                <input class="input--style-6" type="text" id="inputBirth" formControlName="birth">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="name" for="inputPhone">Telefono</div>
+              <div class="value">
+                <input class="input--style-6" type="text" id="inputPhone" formControlName="phone">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="name" for="inputEmail">Correo</div>
+              <div class="value">
+                <input class="input--style-6" type="text" id="inputEmail" formControlName="email">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="name" for="inputAddress">Dirección</div>
+              <div class="value">
+                <div class="input-group">
+                  <textarea class="textarea--style-6" id="inputAddress" formControlName="address"
+                    placeholder="Describe brevemente tus actividades dentro de la empresa"></textarea>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn--radius-2 btn--blue-2" (click)="registroAbouts()">Crear Experiencia</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="js/global.js"></script>
+</body>

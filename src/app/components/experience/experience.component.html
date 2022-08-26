@@ -1,0 +1,26 @@
+<section id="experience" class="bg_black4">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-7 col-md-9 text-center">
+                <div class="heading_s1 heading_light animation" data-animation="fadeInUp" data-animation-delay="0.02s">
+                    <h2>Experiencia Laboral</h2>
+                </div>
+                <p class="animation text-white" data-animation="fadeInUp" data-animation-delay="0.03s">Siempre he
+                    tratado de relacionarme y adquirir empleos donde puedo aplicar mis conocimientos y habilidades al
+                    maxico.</p>
+            </div>
+        </div>
+        <div class="row animation" data-animation="fadeInUp" data-animation-delay="0.04s">
+            <div class="col-lg-4 col-sm-6" *ngFor="let item of experiencias">
+                <div class="icon_box icon_box_style_2 box_dark">
+                    <div class="icon_box_content text_white">
+                        <h4>{{item.area}}</h4>
+                        <p><span class="text_default">{{item.date}}</span> {{item.business}}</p>
+                        <hr>
+                        <p>{{item.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

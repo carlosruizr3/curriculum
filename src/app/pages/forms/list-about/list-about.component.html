@@ -1,0 +1,49 @@
+<body>
+  <button type="button" routerLink="/admin" class="btn btn-secondary btn-block">
+    <span class=""></span> Regresar
+  </button>
+  <div class="page-wrapper bg-dark p-t-70 p-b-10">
+    <div class="container">
+      <div class="card-heading">
+        <h2 class="title">Listado de Abouts</h2>
+      </div>
+      <div>
+
+        <button class="btn btn-success" routerLink="/create_about">Crear About</button>
+      </div>
+      <div class="table-responsive custom-table-responsive">
+        <table class="table custom-table">
+          <thead>
+            <tr>
+              <th scope="col"> ID </th>
+              <th scope="col"> Nacimiento </th>
+              <th scope="col"> Telefono </th>
+              <th scope="col"> Correo Electronico </th>
+              <th scope="col"> Dirección </th>
+              <th scope="col">Action </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let about of abouts">
+              <td>{{about.id}} <br></td>
+              <td>{{about.birth}} <br></td>
+              <td>{{about.phone}} <br></td>
+              <td>{{about.email}} <br></td>
+              <td>{{about.address }} <br></td>
+              <td>
+                <button class="btn btn-dark col-md-8" (click)="update (about.id )">Editar </button>
+                <button class="btn btn-warning  col-md-8" (click)="eliminar(about.id) ">Eliminar </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
